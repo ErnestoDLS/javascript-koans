@@ -74,7 +74,7 @@ describe("About Applying What We Have Learnt", function() {
 
     var isMultiple = function(x) {return x % 3 === 0 || x % 5 === 0};
 
-    var sum = _(_.range(1000)).chain().filter(isMultiple).reduce(function(sum, x){return sum + x}).value();    /* try chaining range() and reduce() */
+    var sum = _(.range(1000)).chain().filter(isMultiple).reduce(function(sum, x){return sum + x}).value();    /* try chaining range() and reduce() */
 
 
     expect(233168).toBe(233168);
@@ -98,7 +98,10 @@ describe("About Applying What We Have Learnt", function() {
 
     /* chain() together map(), flatten() and reduce() */
 
-    expect(ingredientCount['mushrooms']).toBe(FILL_ME_IN);
+    var mapItems = function(x) {};
+    var productHash = _(products).chain().map(function(x) {return x.ingredients}).flatten()forEach(function (x){ingredientCount[x]|| 0 + 1});
+
+    expect(ingredientCount['mushrooms']).toBe(2);
   });
 
   /*********************************************************************************/
