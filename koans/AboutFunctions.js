@@ -91,10 +91,10 @@ describe("About Functions", function() {
     };
 
     var praiseSinger = { givePraise: appendRules };
-    expect(praiseSinger.givePraise("John")).toBe('John Rules');
+    expect(praiseSinger.givePraise("John")).toBe('John rules!');
 
     praiseSinger.givePraise = appendDoubleRules;
-    expect(praiseSinger.givePraise("Mary")).toBe('John Rules', 'John Rules');
+    expect(praiseSinger.givePraise("Mary")).toBe('Mary totally rules!');
 
   });
 });
